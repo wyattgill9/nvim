@@ -1,1 +1,1 @@
-Neovim configuration for my "Arch Linux Hyprland" Desktop
+Neovim configuration for my "Arch Hyprland" desktop
