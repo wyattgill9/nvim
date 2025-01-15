@@ -1,3 +1,10 @@
 return {
-    { "ThePrimeagen/harpoon", lazy = false }
+    { 
+        "ThePrimeagen/harpoon", 
+        lazy = false,
+        config = function()
+            require("harpoon").setup()
+        end
+
+    }
 }

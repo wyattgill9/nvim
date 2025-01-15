@@ -1,4 +1,7 @@
 return {
     "williamboman/mason.nvim",
-    -- lazy = false;
+    lazy = false,
+    config = function()
+        require("mason").setup()
+    end
 }
