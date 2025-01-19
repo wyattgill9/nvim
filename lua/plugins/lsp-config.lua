@@ -23,16 +23,16 @@ return {
       lspconfig.ts_ls.setup({
         capabilities = capabilities
       })
-      lspconfig.solargraph.setup({
-        capabilities = capabilities
-      })
-    --   lspconfig.html.setup({
-    --     capabilities = capabilities
-    --   })
       lspconfig.lua_ls.setup({
         capabilities = capabilities
       })
       lspconfig.rust_analyzer.setup({
+        capabilities = capabilities
+      })
+      lspconfig.pyright.setup({
+        capabilities = capabilities
+      })
+      lspconfig.gopls.setup({
         capabilities = capabilities
       })
 
