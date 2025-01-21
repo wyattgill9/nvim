@@ -9,7 +9,7 @@ return {
         end
   
         local dashboard = require("alpha.themes.dashboard")
-        local icons = require("utils.icons")
+        local icons = require("icons")
         local if_nil = vim.F.if_nil
         local fn = vim.fn
         local config_dir = fn.stdpath('config')
