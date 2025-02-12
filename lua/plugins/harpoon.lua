@@ -6,7 +6,7 @@ return {
     require("harpoon").setup()
   end,
   keys = {
-    { "<leader>A", function() require("harpoon").add_file() end, desc = "Add file to Harpoon" },
+    { "<leader>g", function() require("harpoon").add_file() end, desc = "Add file to Harpoon" },
     { "<leader>a", function() require("harpoon.ui").toggle_quick_menu() end, desc = "Toggle Harpoon menu" },
     { "<leader>1", function() require("harpoon.ui").nav_file(1) end, desc = "Navigate to file 1" },
     { "<leader>2", function() require("harpoon.ui").nav_file(2) end, desc = "Navigate to file 2" },

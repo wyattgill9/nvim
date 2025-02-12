@@ -15,6 +15,9 @@ vim.opt.smartcase = true
 
 vim.opt.signcolumn = 'yes'
 vim.opt.tabstop = 4
+vim.o.shiftwidth = 4
+
+vim.o.expandtab = true
 
 vim.opt.updatetime = 250
 
@@ -39,6 +42,15 @@ vim.keymap.set('n', '<Leader>fg', '<cmd>Telescope live_grep<CR>', { desc = 'Live
 vim.keymap.set('n', '<Leader>fb', '<cmd>Telescope buffers<CR>', { desc = 'Find Buffer' })
 
 
+vim.api.nvim_set_keymap('n', '<C-e>', ':NvimTreeToggle<CR>', { noremap = true })
+
+
+-- unbind arrow keys so i get better at vim:
+
+vim.api.nvim_set_keymap('n', '<Up>', '<Nop>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Down>', '<Nop>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Left>', '<Nop>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Right>', '<Nop>', { noremap = true })
 
 
 
@@ -70,7 +82,7 @@ require("lazy").setup({
     { import = "plugins" },
   },
  
-  checker = { enabled = true, notify = false },
+  checker = { enabled = true },
 })
 
 
