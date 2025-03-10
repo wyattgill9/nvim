@@ -44,6 +44,7 @@ vim.keymap.set('n', '<Leader>fb', '<cmd>Telescope buffers<CR>', { desc = 'Find B
 
 vim.api.nvim_set_keymap('n', '<C-e>', ':NvimTreeToggle<CR>', { noremap = true })
 
+vim.cmd("autocmd BufNewFile,BufRead *.v set filetype=verilog")
 
 -- unbind arrow keys so i get better at vim:
 
