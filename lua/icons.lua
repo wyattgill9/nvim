@@ -134,5 +134,4 @@ local icons = {
     word                = "  ",
     wrench              = "  ",
   }
-  
   return icons

@@ -1,62 +1,40 @@
+---@type LazySpec
 return {
-    "rolv-apneseth/tfm.nvim",
-    lazy = false,
-    opts = {
-        -- TFM to use
-        -- Possible choices: "ranger" | "nnn" | "lf" | "vifm" | "yazi" (default)
-        file_manager = "yazi",
-        -- Replace netrw entirely
-        -- Default: false
-        replace_netrw = true,
-        -- Enable creation of commands
-        -- Default: false
-        -- Commands:
-        --   Tfm: selected file(s) will be opened in the current window
-        --   TfmSplit: selected file(s) will be opened in a horizontal split
-        --   TfmVsplit: selected file(s) will be opened in a vertical split
-        --   TfmTabedit: selected file(s) will be opened in a new tab page
-        enable_cmds = false,
-        -- Custom keybindings only applied within the TFM buffer
-        -- Default: {}
-        keybindings = {
-            ["<ESC>"] = "q",
-            -- Override the open mode (i.e. vertical/horizontal split, new tab)
-            -- Tip: you can add an extra `<CR>` to the end of these to immediately open the selected file(s) (assuming the TFM uses `enter` to finalise selection)
-            ["<C-v>"] = "<C-\\><C-O>:lua require('tfm').set_next_open_mode(require('tfm').OPEN_MODE.vsplit)<CR>",
-            ["<C-x>"] = "<C-\\><C-O>:lua require('tfm').set_next_open_mode(require('tfm').OPEN_MODE.split)<CR>",
-            ["<C-t>"] = "<C-\\><C-O>:lua require('tfm').set_next_open_mode(require('tfm').OPEN_MODE.tabedit)<CR>",
-        },
-        -- Customise UI. The below options are the default
-        ui = {
-            border = "rounded",
-            height = 1,
-            width = 1,
-            x = 0.5,
-            y = 0.5,
-        },
+  "mikavilpas/yazi.nvim",
+  event = "VeryLazy",
+  dependencies = { "folke/snacks.nvim", lazy = true },
+  keys = {
+    -- 👇 in this section, choose your own keymappings!
+    {
+      "<leader>-",
+      mode = { "n", "v" },
+      "<cmd>Yazi<cr>",
+      desc = "Open yazi at the current file",
     },
-    keys = {
-        -- Make sure to change these keybindings to your preference,
-        -- and remove the ones you won't use
-        {
-            "<leader>e",
-            ":Tfm<CR>",
-            desc = "TFM",
-        },
-        {
-            "<leader>mh",
-            ":TfmSplit<CR>",
-            desc = "TFM - horizontal split",
-        },
-        {
-            "<leader>mv",
-            ":TfmVsplit<CR>",
-            desc = "TFM - vertical split",
-        },
-        {
-            "<leader>mt",
-            ":TfmTabedit<CR>",
-            desc = "TFM - new tab",
-        },
+    {
+      -- Open in the current working directory
+      "<leader>cw",
+      "<cmd>Yazi cwd<cr>",
+      desc = "Open the file manager in nvim's working directory",
     },
+    {
+      "<c-up>",
+      "<cmd>Yazi toggle<cr>",
+      desc = "Resume the last yazi session",
+    },
+  },
+  ---@type YaziConfig | {}
+  opts = {
+    -- if you want to open yazi instead of netrw, see below for more info
+    open_for_directories = false,
+    keymaps = {
+      show_help = "<f1>",
+    },
+  },
+  -- 👇 if you use `open_for_directories=true`, this is recommended
+  init = function()
+    -- More details: https://github.com/mikavilpas/yazi.nvim/issues/802
+    -- vim.g.loaded_netrw = 1
+    vim.g.loaded_netrwPlugin = 1
+  end,
 }
