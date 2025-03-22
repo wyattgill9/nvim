@@ -1,18 +1,14 @@
 return {
   "stevearc/conform.nvim",
-  optional = true,
   opts = {
     formatters_by_ft = {
-      -- I was having issues formatting .templ files, all the lines were aligned
-      -- to the left.
-      -- When I ran :ConformInfo I noticed that 2 formatters showed up:
-      -- "LSP: html, templ"
-      -- But none showed as `ready` This fixed that issue and now templ files
-      -- are formatted correctly and :ConformInfo shows:
-      -- "LSP: html, templ"
-      -- "templ ready (templ) /Users/linkarzu/.local/share/neobean/mason/bin/templ"
-      templ = { "templ" },
-      -- php = { nil },
+        lua = { "stylua" },
+        -- Conform will run multiple formatters sequentially
+        python = { "isort", "black" },
+        -- You can customize some of the format options for the filetype (:help conform.format)
+        rust = { "rustfmt", lsp_format = "fallback" },
+        -- Conform will run the first available formatter
+        javascript = { "prettierd", "prettier", stop_after_first = true },
     },
   },
 }
