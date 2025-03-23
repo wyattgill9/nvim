@@ -73,6 +73,7 @@ vim.keymap.set('n', '<Leader>x', '<cmd>write<CR><cmd>quit<CR>', { noremap = true
 -- Toggle file explorer (using NvimTree)
 vim.api.nvim_set_keymap('n', '<C-e>', ':NvimTreeToggle<CR>', { noremap = true })
 
+-- NO MORE MOUSE
 vim.opt.mouse = ""
 
 -- DISABLE ARROW KEYS (Force hjkl usage)
@@ -103,13 +104,8 @@ vim.keymap.set('v', '<Leader>c', 'gc', { remap = true, desc = 'Toggle comment' }
 -- Filetype detection
 vim.cmd("autocmd BufNewFile,BufRead *.v set filetype=verilog")
 
--- NO MORE MOUSEY
-
 -- CLIPBOARD
 vim.opt.clipboard = 'unnamedplus'
-
--- Lazy
-
 
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
