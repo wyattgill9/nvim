@@ -73,6 +73,7 @@ vim.keymap.set('n', '<Leader>x', '<cmd>write<CR><cmd>quit<CR>', { noremap = true
 -- Toggle file explorer (using NvimTree)
 vim.api.nvim_set_keymap('n', '<C-e>', ':NvimTreeToggle<CR>', { noremap = true })
 
+vim.opt.mouse = ""
 
 -- DISABLE ARROW KEYS (Force hjkl usage)
 vim.keymap.set('', '<Up>', '<Nop>', { noremap = true })
