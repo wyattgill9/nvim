@@ -1,5 +1,4 @@
 return {
-	-- autocomplete for cargo.toml
 	{
 		'saecki/crates.nvim',
 		dependencies = { 'saghen/blink.compat', opts = { impersonate_nvim_cmp = true } },
@@ -28,7 +27,6 @@ return {
 		},
 	},
 
-	-- treesitter
 	{
 		'nvim-treesitter/nvim-treesitter',
 		opts = function(_, opts)
