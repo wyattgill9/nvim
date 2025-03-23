@@ -59,7 +59,7 @@ vim.opt.updatetime = 100
 
 -- CUSTOM MAPS FOR SPEED
 -- Telescope speed improvements
-vim.keymap.set('n', 'f', '<cmd>Telescope find_files<CR>', { desc = 'Find File' })
+vim.keymap.set('n', '<Leader>f', '<cmd>Telescop find_files<CR>', { desc = 'Find File' })
 vim.keymap.set('n', '<Leader>fg', '<cmd>Telescope live_grep_args<CR>', { desc = 'Live Grep Args' }) -- Using LGA for better performance
 vim.keymap.set('n', '<Leader>fb', '<cmd>Telescope buffers<CR>', { desc = 'Find Buffer' })
 vim.keymap.set('n', '<Leader>fh', '<cmd>Telescope help_tags<CR>', { desc = 'Help Tags' })
@@ -109,6 +109,7 @@ vim.cmd("autocmd BufNewFile,BufRead *.v set filetype=verilog")
 vim.opt.clipboard = 'unnamedplus'
 
 -- Lazy
+
 
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
