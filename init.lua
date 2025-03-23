@@ -105,6 +105,9 @@ vim.cmd("autocmd BufNewFile,BufRead *.v set filetype=verilog")
 
 -- NO MORE MOUSEY
 
+-- CLIPBOARD
+vim.opt.clipboard = 'unnamedplus'
+
 -- Lazy
 
 
