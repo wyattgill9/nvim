@@ -1,4 +1,4 @@
--- MAPS:
+-- REMAPS:
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -35,7 +35,6 @@ vim.opt.scrolloff = 10
 
 -- CUSTOM MAPS:
 
--- PERFORMANCE OPTIMIZATION
 -- Disable unused built-in plugins
 vim.g.loaded_gzip = 1
 vim.g.loaded_tar = 1
@@ -47,6 +46,7 @@ vim.g.loaded_getscriptPlugin = 1
 vim.g.loaded_vimball = 1
 vim.g.loaded_vimballPlugin = 1
 vim.g.loaded_2html_plugin = 1
+
 -- vim.g.loaded_logipat = 1
 vim.g.loaded_rrhelper = 1
 vim.g.loaded_netrw = 1
@@ -57,8 +57,7 @@ vim.g.loaded_netrwFileHandlers = 1
 -- Set updatetime for faster response
 vim.opt.updatetime = 100
 
--- CUSTOM MAPS FOR SPEED
--- Telescope speed improvements
+-- Telescope
 vim.keymap.set('n', '<Leader>f', '<cmd>Telescop find_files<CR>', { desc = 'Find File' })
 vim.keymap.set('n', '<Leader>fg', '<cmd>Telescope live_grep_args<CR>', { desc = 'Live Grep Args' }) -- Using LGA for better performance
 vim.keymap.set('n', '<Leader>fb', '<cmd>Telescope buffers<CR>', { desc = 'Find Buffer' })
@@ -104,7 +103,7 @@ vim.keymap.set('v', '<Leader>c', 'gc', { remap = true, desc = 'Toggle comment' }
 -- Filetype detection
 vim.cmd("autocmd BufNewFile,BufRead *.v set filetype=verilog")
 
--- CLIPBOARD
+-- UNIVERSAL CLIPBOARD
 vim.opt.clipboard = 'unnamedplus'
 
 
