@@ -69,9 +69,6 @@ vim.keymap.set('n', '<Leader>w', '<cmd>write<CR>', { noremap = true, desc = 'Qui
 vim.keymap.set('n', '<Leader>q', '<cmd>quit<CR>', { noremap = true, desc = 'Quick quit' })
 vim.keymap.set('n', '<Leader>x', '<cmd>write<CR><cmd>quit<CR>', { noremap = true, desc = 'Save and quit' })
 
--- Toggle file explorer (using NvimTree)
-vim.api.nvim_set_keymap('n', '<C-e>', ':NvimTreeToggle<CR>', { noremap = true })
-
 -- NO MORE MOUSE
 vim.opt.mouse = ""
 
