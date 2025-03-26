@@ -26,7 +26,13 @@ return {
 			},
 		},
 	},
+    {
 
+     'mrcjkb/rustaceanvim',
+     version = '^5',
+     lazy = false,
+
+    },
 	{
 		'nvim-treesitter/nvim-treesitter',
 		opts = function(_, opts)
