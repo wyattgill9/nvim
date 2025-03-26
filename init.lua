@@ -103,8 +103,9 @@ vim.cmd("autocmd BufNewFile,BufRead *.v set filetype=verilog")
 -- UNIVERSAL CLIPBOARD
 vim.opt.clipboard = 'unnamedplus'
 
+-- OIL
+-- vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
   local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
