@@ -70,7 +70,6 @@ vim.keymap.set('n', '<Leader>q', '<cmd>quit<CR>', { noremap = true, desc = 'Quic
 vim.keymap.set('n', '<Leader>x', '<cmd>write<CR><cmd>quit<CR>', { noremap = true, desc = 'Save and quit' })
 
 -- NO MORE MOUSE
-vim.opt.mouse = ""
 
 -- DISABLE ARROW KEYS (Force hjkl usage)
 vim.keymap.set('', '<Up>', '<Nop>', { noremap = true })
