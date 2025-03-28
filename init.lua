@@ -35,6 +35,8 @@ vim.opt.scrolloff = 10
 
 -- CUSTOM MAPS:
 
+vim.o.swapfile = false
+
 -- Disable unused built-in plugins
 vim.g.loaded_gzip = 1
 vim.g.loaded_tar = 1
