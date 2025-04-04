@@ -1,4 +1,6 @@
 -- REMAPS:
+vim.opt.swapfile = false
+
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -32,6 +34,8 @@ vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 
 vim.opt.scrolloff = 10
+
+vim.o.relativenumber = true
 
 -- CUSTOM MAPS:
 
