@@ -1,7 +1,6 @@
 -- REMAPS:
 vim.opt.swapfile = false
 
-
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
@@ -9,6 +8,7 @@ vim.opt.number = true
 
 vim.opt.mouse = 'a'
 vim.opt.showmode = false
+
 -- Save undo history
 vim.opt.undofile = true
 
@@ -36,8 +36,6 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 vim.o.relativenumber = true
-
--- CUSTOM MAPS:
 
 -- Disable unused built-in plugins
 vim.g.loaded_gzip = 1
@@ -74,6 +72,7 @@ vim.keymap.set('n', '<Leader>q', '<cmd>quit<CR>', { noremap = true, desc = 'Quic
 vim.keymap.set('n', '<Leader>x', '<cmd>write<CR><cmd>quit<CR>', { noremap = true, desc = 'Save and quit' })
 
 -- NO MORE MOUSE
+vim.opt.mouse = ''
 
 -- DISABLE ARROW KEYS (Force hjkl usage)
 vim.keymap.set('', '<Up>', '<Nop>', { noremap = true })
@@ -105,9 +104,6 @@ vim.cmd("autocmd BufNewFile,BufRead *.v set filetype=verilog")
 
 -- UNIVERSAL CLIPBOARD
 vim.opt.clipboard = 'unnamedplus'
-
--- OIL
--- vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
