@@ -59,6 +59,13 @@ vim.g.loaded_netrwFileHandlers = 1
 -- Set updatetime for faster response
 vim.opt.updatetime = 100
 
+-- Center cursor on search
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- Search Ops
+vim.opt.ignorecase = true
+
 -- Telescope
 vim.keymap.set('n', '<Leader>f', '<cmd>Telescop find_files<CR>', { desc = 'Find File' })
 vim.keymap.set('n', '<Leader>fg', '<cmd>Telescope live_grep_args<CR>', { desc = 'Live Grep Args' }) -- Using LGA for better performance
@@ -79,12 +86,6 @@ vim.keymap.set('', '<Up>', '<Nop>', { noremap = true })
 vim.keymap.set('', '<Down>', '<Nop>', { noremap = true })
 vim.keymap.set('', '<Left>', '<Nop>', { noremap = true })
 vim.keymap.set('', '<Right>', '<Nop>', { noremap = true })
-
--- Quick harpoon integration
-vim.keymap.set('n', '<Leader>a', '<cmd>lua require("harpoon.mark").add_file()<CR>', { desc = 'Harpoon add file' })
-vim.keymap.set('n', '<Leader>h', '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>', { desc = 'Harpoon menu' })
-vim.keymap.set('n', '<Leader>1', '<cmd>lua require("harpoon.ui").nav_file(1)<CR>', { desc = 'Harpoon file 1' })
-vim.keymap.set('n', '<Leader>2', '<cmd>lua require("harpoon.ui").nav_file(2)<CR>', { desc = 'Harpoon file 2' })
 
 -- Zen mode toggle
 vim.keymap.set('n', '<Leader>z', '<cmd>ZenMode<CR>', { noremap = true, desc = 'Toggle Zen Mode' })
@@ -121,15 +122,11 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
-
 require("lazy").setup({
   spec = {
 
     { import = "plugins" },
   },
- 
+
   checker = { enabled = true },
 })
-
-

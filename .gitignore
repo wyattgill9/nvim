@@ -1,0 +1,32 @@
+# Ignore swap/backup/undo files
+*.swp
+*.swo
+*.bak
+*.tmp
+*.undo
+*.json
+
+# Ignore plugin-specific generated files
+/lazy-lock.json
+/lazy/
+/packer_compiled.lua
+/site/
+*.log
+
+# Ignore LSP servers downloaded by Mason
+/mason/
+
+# Ignore DAP servers (debugging)
+/nvim-dap/
+
+# Ignore test files or temp code
+*.test.lua
+temp_*.lua
+
+# Node-related trash (if you do JS/TS in nvim)
+/node_modules/
+
+# Python crap
+__pycache__/
+*.pyc
+
