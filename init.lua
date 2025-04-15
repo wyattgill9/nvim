@@ -22,10 +22,6 @@ vim.keymap.set('n', '<Leader>q', '<cmd>write<CR><cmd>quit<CR>', { noremap = true
 -- NO MORE MOUSE
 vim.opt.mouse = ''
 
-for _, key in ipairs({'<Up>', '<Down>', '<Left>', '<Right>'}) do
-  vim.keymap.set({'n', 'v', 'i'}, key, '<Nop>', { noremap = true })
-end
-
 -- DISABLE ARROW KEYS (Force hjkl usage)
 vim.keymap.set('', '<Up>', '<Nop>', { noremap = true })
 vim.keymap.set('', '<Down>', '<Nop>', { noremap = true })
