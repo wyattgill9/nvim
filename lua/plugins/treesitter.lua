@@ -14,6 +14,8 @@ return {
                 additional_vim_regex_highlighting = false,
             },
             indent = { enable = true },
+            semantic_tokens = true,
+
             autotag = {
                 enable = true,
             },

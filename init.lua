@@ -44,6 +44,14 @@ vim.keymap.set('v', '<Leader>c', 'gc', { remap = true, desc = 'Toggle comment' }
 -- Filetype detection
 vim.cmd("autocmd BufNewFile,BufRead *.v set filetype=verilog")
 
+
+vim.keymap.set("", "<up>", "<nop>", { noremap = true })
+vim.keymap.set("", "<down>", "<nop>", { noremap = true })
+vim.keymap.set("i", "<up>", "<nop>", { noremap = true })
+vim.keymap.set("i", "<down>", "<nop>", { noremap = true })
+
+vim.opt.mouse = ""
+
 -- UNIVERSAL CLIPBOARD
 vim.opt.clipboard = 'unnamedplus'
 
@@ -51,10 +59,10 @@ vim.opt.swapfile = false
 
 vim.opt.number = true
 
-vim.opt.mouse = 'a'
 vim.opt.showmode = false
 
 -- Save undo history
+
 vim.opt.undofile = true
 
 vim.opt.ignorecase = true
