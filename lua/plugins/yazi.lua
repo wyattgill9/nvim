@@ -1,6 +1,6 @@
 return {
   "mikavilpas/yazi.nvim",
-  opts = {
+   opts = {
     open_for_directories = false,  -- Set to true to open yazi instead of netrw for directories
     keymaps = {
       show_help = '<F1>',  -- Keybinding to show help within yazi
