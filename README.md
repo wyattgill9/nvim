@@ -1,1 +1,1 @@
-My PDE/Neovim configuration for my "Arch Hyprland" desktop & Macbook Air
+My PDE/Neovim configuration for my "Nix Hyprland" desktop & Macbook Air
