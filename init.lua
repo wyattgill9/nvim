@@ -19,18 +19,6 @@ vim.keymap.set('n', '<Leader>r', '<cmd>Telescope oldfiles<CR>', { desc = 'Recent
 vim.keymap.set('n', '<Leader>w', '<cmd>write<CR>', { noremap = true, desc = 'Quick save' })
 vim.keymap.set('n', '<Leader>q', '<cmd>write<CR><cmd>quit<CR>', { noremap = true, desc = 'Quick quit' })
 
--- NO MORE MOUSE
-vim.opt.mouse = ''
-
--- DISABLE ARROW KEYS (Force hjkl usage)
-vim.keymap.set('', '<Up>', '<Nop>', { noremap = true })
-vim.keymap.set('', '<Down>', '<Nop>', { noremap = true })
-vim.keymap.set('', '<Left>', '<Nop>', { noremap = true })
-vim.keymap.set('', '<Right>', '<Nop>', { noremap = true })
-
--- Zen mode toggle
-vim.keymap.set('n', '<Leader>z', '<cmd>ZenMode<CR>', { noremap = true, desc = 'Toggle Zen Mode' })
-
 -- LSP shortcuts
 vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = 'Go to definition' })
 vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', { desc = 'Go to references' })
@@ -44,52 +32,26 @@ vim.keymap.set('v', '<Leader>c', 'gc', { remap = true, desc = 'Toggle comment' }
 -- Filetype detection
 vim.cmd("autocmd BufNewFile,BufRead *.v set filetype=verilog")
 
-
-vim.keymap.set("", "<up>", "<nop>", { noremap = true })
-vim.keymap.set("", "<down>", "<nop>", { noremap = true })
-vim.keymap.set("i", "<up>", "<nop>", { noremap = true })
-vim.keymap.set("i", "<down>", "<nop>", { noremap = true })
-
-vim.opt.mouse = ""
-
--- UNIVERSAL CLIPBOARD
 vim.opt.clipboard = 'unnamedplus'
 
 vim.opt.swapfile = false
-
 vim.opt.number = true
-
 vim.opt.showmode = false
-
--- Save undo history
-
 vim.opt.undofile = true
-
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-
 vim.opt.signcolumn = 'yes'
 vim.opt.tabstop = 4
 vim.o.shiftwidth = 4
-
 vim.o.expandtab = true
-
-vim.opt.updatetime = 250
-
 vim.opt.timeoutlen = 300
-
 vim.opt.splitright = true
 vim.opt.splitbelow = true
-
 vim.opt.inccommand = 'split'
-
 vim.opt.cursorline = true
-
 vim.opt.scrolloff = 10
-
 vim.o.relativenumber = true
 
--- Disable unused built-in plugins
 vim.g.loaded_gzip = 1
 vim.g.loaded_tar = 1
 vim.g.loaded_tarPlugin = 1
@@ -100,15 +62,12 @@ vim.g.loaded_getscriptPlugin = 1
 vim.g.loaded_vimball = 1
 vim.g.loaded_vimballPlugin = 1
 vim.g.loaded_2html_plugin = 1
-
--- vim.g.loaded_logipat = 1
 vim.g.loaded_rrhelper = 1
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_netrwSettings = 1
 vim.g.loaded_netrwFileHandlers = 1
 
--- Set updatetime for faster response
 vim.opt.updatetime = 100
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
