@@ -3,50 +3,45 @@ return {
     "williamboman/mason.nvim",
     lazy = false,
     config = function()
-      require("mason").setup()
+      require("mason").setup({
+        ensure_installed = {
+          "lua-language-server",
+          "rust-analyzer",
+          "clangd",
+          "tl_ls",
+          "zls"
+        }
+
+      })
     end,
   },
   {
     "neovim/nvim-lspconfig",
     lazy = false,
     config = function()
-      -- local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
       local lspconfig = require("lspconfig")
       lspconfig.ts_ls.setup({
         capabilities = capabilities
       })
-      lspconfig.lua_ls.setup({
+      lspconfig.ts_ls.setup({
         capabilities = capabilities
       })
---      lspconfig.rust_analyzer.setup({
---        capabilities = capabilities
---      })
-      lspconfig.pyright.setup({
+      lspconfig.rust_analyzer.setup({
         capabilities = capabilities
-      })
-      lspconfig.gopls.setup({
-        capabilities = capabilities
-      })
-      lspconfig.gleam.setup({
-		capabilities = capabilities
       })
       lspconfig.clangd.setup({
         capabilities = capabilities
       })
-      lspconfig.hls.setup({
-        capabilities = capabilities
-      })
+      -- lspconfig.hls.setup({
+        -- capabilities = capabilities
+      -- })
       lspconfig.zls.setup({
         capabilities = capabilites
       })
-      lspconfig.astro.setup({
-        capabilities = capabilities
-      })
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-      vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-      vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
-      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+      -- lspconfig.astro.setup({
+        -- capabilities = capabilities
+      -- })
     end,
   },
 }
