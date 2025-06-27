@@ -9,19 +9,19 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.opt.ignorecase = true
 
 -- Telescope
-vim.keymap.set('n', '<Leader>f', '<cmd>Telescop find_files<CR>', { desc = 'Find File' })
+vim.keymap.set('n', '<Leader>f', '<cmd>Telescope find_files<CR>', { desc = 'Find File' })
 vim.keymap.set('n', '<Leader>g', '<cmd>Telescope live_grep_args<CR>', { desc = 'Live Grep Args' }) -- Using LGA for better performance
 vim.keymap.set('n', '<Leader>b', '<cmd>Telescope buffers<CR>', { desc = 'Find Buffer' })
 vim.keymap.set('n', '<Leader>h', '<cmd>Telescope help_tags<CR>', { desc = 'Help Tags' })
-vim.keymap.set('n', '<Leader>r', '<cmd>Telescope oldfiles<CR>', { desc = 'Recent Files' })
+vim.keymap.set('n', '<Leader>p', '<cmd>Telescope oldfiles<CR>', { desc = 'Recent Files' })
 
 -- Quick save and quit
 vim.keymap.set('n', '<Leader>w', '<cmd>write<CR>', { noremap = true, desc = 'Quick save' })
 vim.keymap.set('n', '<Leader>q', '<cmd>write<CR><cmd>quit<CR>', { noremap = true, desc = 'Quick quit' })
 
 -- LSP shortcuts
-vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = 'Go to definition' })
-vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', { desc = 'Go to references' })
+vim.keymap.set('n', '<Leader>d', '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = 'Go to definition' })
+-- vim.keymap.set('n', '<Leader>r', '<cmd>lua vim.lsp.buf.references()<CR>', { desc = 'Go to references' })
 vim.keymap.set('n', '<Leader>k', '<cmd>lua vim.lsp.buf.hover()<CR>', { desc = 'Show hover info' })
 vim.keymap.set('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', { desc = 'Rename symbol' })
 vim.keymap.set('n', '<Leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', { desc = 'Code actions' })
