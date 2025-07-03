@@ -33,9 +33,6 @@ return {
       lspconfig.clangd.setup({
         capabilities = capabilities
       })
-      -- lspconfig.hls.setup({
-        -- capabilities = capabilities
-      -- })
       lspconfig.zls.setup({
         capabilities = capabilites
       })
