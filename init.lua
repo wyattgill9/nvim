@@ -5,7 +5,7 @@ vim.g.maplocalleader = ' '
 vim.keymap.set('n', '<Leader>c', 'gcc', { remap = true, desc = 'Toggle comment' })
 vim.keymap.set('v', '<Leader>c', 'gc', { remap = true, desc = 'Toggle comment' })
 
--- Center cursor on search
+-- Center cursor
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
@@ -22,7 +22,7 @@ vim.keymap.set('n', '<Leader>p', '<cmd>Telescope oldfiles<CR>', { desc = 'Recent
 vim.keymap.set('n', '<Leader>w', '<cmd>write<CR>', { noremap = true, desc = 'Quick save' })
 vim.keymap.set('n', '<Leader>q', '<cmd>write<CR><cmd>quit<CR>', { noremap = true, desc = 'Quick quit' })
 
-vim.keymap.set('n', '<Leader>d', '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = 'Go to definition' })
+vim.keymap.set('n', '<Leader>gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = 'Go to definition' })
 vim.keymap.set('n', '<Leader>k', '<cmd>lua vim.lsp.buf.hover()<CR>', { desc = 'Show hover info' })
 vim.keymap.set('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', { desc = 'Rename symbol' })
 vim.keymap.set('n', '<Leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', { desc = 'Code actions' })
