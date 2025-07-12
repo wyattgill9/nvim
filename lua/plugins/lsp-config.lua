@@ -31,6 +31,13 @@ return {
         capabilities = capabilities
       })
       lspconfig.clangd.setup({
+        -- cmd = {
+          -- "clangd-unwrapped",  
+          -- "--background-index",
+          -- "--clang-tidy",
+          -- "--header-insertion=never",
+          -- "--query-driver=**/clang++,**/g++",
+        -- },
         capabilities = capabilities
       })
       lspconfig.zls.setup({
