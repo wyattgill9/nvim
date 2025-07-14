@@ -1,6 +1,5 @@
 return {
   'saghen/blink.cmp',
-  dependencies = 'rafamadriz/friendly-snippets',
   version = '*',
   opts = {
     keymap = {
@@ -31,7 +30,7 @@ return {
     },
 
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer' },
+      default = { 'lsp', 'path', 'buffer' },
     },
   },
   opts_extend = { "sources.default" }
