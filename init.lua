@@ -16,9 +16,6 @@ vim.keymap.set('n', '<Leader>f', '<cmd>Telescope find_files<CR>', { desc = 'Find
 vim.keymap.set('n', '<Leader>g', '<cmd>Telescope live_grep_args<CR>', { desc = 'Live Grep Args' })
 vim.keymap.set('n', '<Leader>p', '<cmd>Telescope oldfiles<CR>', { desc = 'Recent Files' })
 
-vim.keymap.set('n', '<Leader>gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = 'Go to definition' })
-vim.keymap.set('n', '<Leader>k', '<cmd>lua vim.lsp.buf.hover()<CR>', { desc = 'Show hover info' })
-
 vim.opt.clipboard = 'unnamedplus'
 
 vim.opt.ignorecase = true
@@ -30,8 +27,6 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.opt.cursorline = true
 vim.o.relativenumber = true
-
-vim.cmd("autocmd BufNewFile,BufRead *.v set filetype=verilog")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
